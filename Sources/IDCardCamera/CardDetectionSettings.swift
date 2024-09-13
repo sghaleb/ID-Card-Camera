@@ -23,6 +23,8 @@ import UIKit
 /// - Since: 1.4.0
 @objc public class BaseCardDetectionSettings: NSObject {
     
+    @objc public var title: String
+    
     /// Card orientation
     /// - Since: 1.0.0
     @objc public enum Orientation: Int {
@@ -71,6 +73,7 @@ import UIKit
     /// - Since: 1.0.0
     @objc public init(width: CGFloat, height: CGFloat) {
         self.size = CGSize(width: width, height: height)
+        self.title = "Test App"
     }
     
     /// Convenience initializer

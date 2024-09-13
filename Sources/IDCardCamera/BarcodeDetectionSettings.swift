@@ -28,6 +28,8 @@ import Vision
     /// - Since: 1.4.0
     @objc public let barcodeSymbologies: [VNBarcodeSymbology]
     
+    @objc public var title: String
+    
     /// Initializer
     /// - Parameter barcodeSymbologies: Symbologies of barcodes to detect
     /// - Throws: Barcode detection settings error when attempting to initialize the settings with an unsupported barcode symbology
@@ -39,6 +41,8 @@ import Vision
             }
             return true
         })
+        
+        self.title = "Test App"
     }
 }
 

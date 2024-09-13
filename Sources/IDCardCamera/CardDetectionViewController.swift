@@ -25,6 +25,8 @@ import Vision
     /// - Since: 1.0.0
     @objc public override init() {
         super.init()
+        
+        navigationBar.topItem?.title = settings.title
     }
     
     required init?(coder: NSCoder) {
