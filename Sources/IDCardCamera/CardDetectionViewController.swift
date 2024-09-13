@@ -83,12 +83,14 @@ import Vision
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set navigation bar text (Localizable)
         self.navigationBar.topItem?.title = self.settings.title
         self.navigationBar.topItem?.prompt = self.settings.prompt
+        self.navigationBar.topItem?.leftBarButtonItem?.title = self.settings.cancelButtonTitle
+        self.navigationBar.topItem?.rightBarButtonItem?.title = self.settings.rotateButtonTitle
         
         self.sessionHandler.torchSettings = self.settings
         self.sessionHandler.cardDetectionSettings = self.settings
-        
-        
     }
 }
