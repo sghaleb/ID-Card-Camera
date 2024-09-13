@@ -76,6 +76,7 @@ import UIKit
     @objc public init(width: CGFloat, height: CGFloat) {
         self.size = CGSize(width: width, height: height)
         self.title = "Test App"
+        self.prompt = ""
     }
     
     /// Convenience initializer
