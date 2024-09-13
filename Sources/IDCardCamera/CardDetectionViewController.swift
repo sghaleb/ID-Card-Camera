@@ -25,8 +25,6 @@ import Vision
     /// - Since: 1.0.0
     @objc public override init() {
         super.init()
-        
-        navigationBar.topItem?.title = settings.title
     }
     
     required init?(coder: NSCoder) {
@@ -85,7 +83,11 @@ import Vision
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationBar.topItem?.title = self.settings.title
+        
         self.sessionHandler.torchSettings = self.settings
         self.sessionHandler.cardDetectionSettings = self.settings
+        
+        
     }
 }
