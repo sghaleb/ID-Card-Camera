@@ -84,6 +84,7 @@ import Vision
     override public func viewDidLoad() {
         super.viewDidLoad()
         self.navigationBar.topItem?.title = self.settings.title
+        self.navigationBar.items?.first?.title = self.settings.title
         
         self.sessionHandler.torchSettings = self.settings
         self.sessionHandler.cardDetectionSettings = self.settings
