@@ -25,6 +25,8 @@ import UIKit
     
     @objc public var title: String
     
+    @objc public var prompt: String
+    
     /// Card orientation
     /// - Since: 1.0.0
     @objc public enum Orientation: Int {
