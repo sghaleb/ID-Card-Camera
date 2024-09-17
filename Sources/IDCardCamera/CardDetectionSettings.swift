@@ -23,13 +23,13 @@ import UIKit
 /// - Since: 1.4.0
 @objc public class BaseCardDetectionSettings: NSObject {
     
-    @objc public var title: String
+    @objc public var title: String?
     
-    @objc public var prompt: String
+    @objc public var prompt: String?
     
-    @objc public var cancelButtonLabel: String
+    @objc public var cancelButtonLabel: String?
     
-    @objc public var rotateButtonLabel: String
+    @objc public var rotateButtonLabel: String?
     
     /// Card orientation
     /// - Since: 1.0.0

@@ -85,10 +85,22 @@ import Vision
         super.viewDidLoad()
         
         // Set navigation bar text (Localizable)
-        self.navigationBar.topItem?.title = self.settings.title
-        self.navigationBar.topItem?.prompt = self.settings.prompt
-        self.navigationBar.topItem?.leftBarButtonItem?.title = self.settings.cancelButtonLabel
-        self.navigationBar.topItem?.rightBarButtonItem?.title = self.settings.rotateButtonLabel
+        // All strings are optional
+        if let _ = self.settings.title {
+            self.navigationBar.topItem?.title = self.settings.title
+        }
+        
+        if let _ = self.settings.prompt {
+            self.navigationBar.topItem?.prompt = self.settings.prompt
+        }
+        
+        if let _ = self.settings.cancelButtonLabel {
+            self.navigationBar.topItem?.leftBarButtonItem?.title = self.settings.cancelButtonLabel
+        }
+        
+        if let _ = self.settings.rotateButtonLabel {
+            self.navigationBar.topItem?.rightBarButtonItem?.title = self.settings.rotateButtonLabel
+        }
         
         self.sessionHandler.torchSettings = self.settings
         self.sessionHandler.cardDetectionSettings = self.settings
