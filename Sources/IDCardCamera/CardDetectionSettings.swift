@@ -27,9 +27,9 @@ import UIKit
     
     @objc public var prompt: String
     
-    @objc public var cancelButtonTitle: String
+    @objc public var cancelButtonLabel: String
     
-    @objc public var rotateButtonTitle: String
+    @objc public var rotateButtonLabel: String
     
     /// Card orientation
     /// - Since: 1.0.0
@@ -81,8 +81,8 @@ import UIKit
         self.size = CGSize(width: width, height: height)
         self.title = "Test App"
         self.prompt = ""
-        self.cancelButtonTitle = "Cancel"
-        self.rotateButtonTitle = "Rotate Card"
+        self.cancelButtonLabel = "Cancel"
+        self.rotateButtonLabel = "Rotate Card"
     }
     
     /// Convenience initializer

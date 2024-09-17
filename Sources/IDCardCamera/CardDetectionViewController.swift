@@ -87,8 +87,8 @@ import Vision
         // Set navigation bar text (Localizable)
         self.navigationBar.topItem?.title = self.settings.title
         self.navigationBar.topItem?.prompt = self.settings.prompt
-        self.navigationBar.topItem?.leftBarButtonItem?.title = self.settings.cancelButtonTitle
-        self.navigationBar.topItem?.rightBarButtonItem?.title = self.settings.rotateButtonTitle
+        self.navigationBar.topItem?.leftBarButtonItem?.title = self.settings.cancelButtonLabel
+        self.navigationBar.topItem?.rightBarButtonItem?.title = self.settings.rotateButtonLabel
         
         self.sessionHandler.torchSettings = self.settings
         self.sessionHandler.cardDetectionSettings = self.settings
