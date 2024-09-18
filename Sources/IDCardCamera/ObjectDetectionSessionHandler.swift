@@ -101,7 +101,11 @@ class ObjectDetectionSessionHandler: NSObject, AVCaptureVideoDataOutputSampleBuf
         
         session.commitConfiguration()
         
-        Task.detached {
+        if #available(iOS 13.0, *) {
+            Task.detached {
+                self.session.startRunning()
+            }
+        } else {
             self.session.startRunning()
         }
     }
