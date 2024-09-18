@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AVFoundation
+@preconcurrency import AVFoundation
 import Vision
 
 class ObjectDetectionSessionHandler: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
@@ -101,7 +101,9 @@ class ObjectDetectionSessionHandler: NSObject, AVCaptureVideoDataOutputSampleBuf
         
         session.commitConfiguration()
         
-        session.startRunning()
+        Task.detached {
+            self.session.startRunning()
+        }
     }
     
     func stopCamera() {
