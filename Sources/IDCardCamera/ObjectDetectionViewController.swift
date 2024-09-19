@@ -37,7 +37,8 @@ public class ObjectDetectionViewController: UIViewController, CardDetectionSessi
             imageName = "torch_off"
         }
         self.sessionHandler.toggleTorch(on: torchOn)
-        self.torchImageView.image = UIImage(named: imageName, in: Bundle(for: type(of: self)), compatibleWith: nil)
+        
+        self.torchImageView.image = UIImage(named: imageName, in: .module, compatibleWith: nil)
     }
 
     override public func viewDidLoad() {
@@ -54,7 +55,8 @@ public class ObjectDetectionViewController: UIViewController, CardDetectionSessi
     override public func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.sessionHandler.delegate = self
-        self.navigationController?.navigationBar.barStyle = .blackTranslucent
+        self.navigationController?.navigationBar.barStyle = .black
+        self.navigationController?.navigationBar.isTranslucent = true
         switch AVCaptureDevice.authorizationStatus(for: AVMediaType.video) {
         case .authorized:
             self.sessionHandler.startCamera()

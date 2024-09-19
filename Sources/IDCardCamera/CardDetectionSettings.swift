@@ -79,10 +79,6 @@ import UIKit
     /// - Since: 1.0.0
     @objc public init(width: CGFloat, height: CGFloat) {
         self.size = CGSize(width: width, height: height)
-        self.title = "Test App"
-        self.prompt = ""
-        self.cancelButtonLabel = "Cancel"
-        self.rotateButtonLabel = "Rotate Card"
     }
     
     /// Convenience initializer

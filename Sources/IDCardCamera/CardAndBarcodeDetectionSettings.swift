@@ -13,6 +13,12 @@ import Vision
 /// - Since: 1.4.0
 @objc public class CardAndBarcodeDetectionSettings: NSObject, TorchSettings {
     
+    @objc public var title: String?
+    
+    @objc public var prompt: String?
+    
+    @objc public var cancelButtonLabel: String?
+    
     /// Set the torch level when the user turns the torch on
     ///
     /// Range `0.0` (darkest) – `1` (brightest). Default value is `0.1`.
